@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Handlebars Exercise</title>
-</head>
-<body>
-  <h1>Here's a random user</h1>
+  <head>
+    <meta charset="UTF-8">
+    <title>Handlebars Exercise</title>
+  </head>
+  <body>
+    <h1>Here's a random user</h1>
 
-<!-- output div -->
-  <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-<!-- handlebars script -->
-  <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
-<!-- regular javascript scripts -->
-  <script type="text/javascript" src="myJavascript.js"></script>
-</body>
+  <!-- output div -->
+    <div id="outputDiv"></div>
+
+    <script id="userInfo" type="text/x-handlebars-template">
+      <div>
+        <img src="{{results.0.picture.medium}}">
+        <h4>Name: {{results.0.name.first}} {{randomUser.results.0.name.last}}</h4>
+        <p>Address: {{results.0.location.street}}</p>
+        <p>{{results.0.location.city}}</p>
+        <p>{{results.0.location.state}}</p>
+        <p>{{results.0.location.postcode}}</p>
+        <p>Email: {{results.0.email}}</p>
+        <p>Country: {{results.0.nat}}</p>
+    </script>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+  <!-- handlebars script -->
+    <script type="text/javascript" src="bower_components/handlebars/handlebars.js"></script>
+  <!-- regular javascript scripts -->
+    <script type="text/javascript" src="myJavascript.js"></script>
+  </body>
 </html>
