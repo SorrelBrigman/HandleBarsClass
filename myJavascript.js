@@ -23,14 +23,35 @@ var randomUser = {
   ]
 }
 
-//handlebars step one: grap the html from the script tag
+var promise1 = new Promise(function(resolve, reject) {
+  $.ajax({
+    url : "https://randomuser.me/api/"
+  })
+  .done(function(data, textStatus, XHR){
+    resolve(data);
+  })
+})
 
 
-//handlebars step two: compile it into a template
 
 
-//handlebars step three:render the HTML by passing the data to the template
 
 
-//handlebars step four: put the complete HTML into the DOM
 
+promise1.then(function(data){
+
+
+  //handlebars step one: grap the html from the script tag
+  var userHTML = $("#userInfo").html();
+
+  //handlebars step two: compile it into a template
+  var userCompiled = Handlebars.compile(userHTML);
+
+  //handlebars step three:render the HTML by passing the data to the template
+  var userInsert = userCompiled(data);
+
+  //handlebars step four: put the complete HTML into the DOM
+
+  $("#outputDiv").append(userInsert);
+
+});

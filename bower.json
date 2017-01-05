@@ -1,0 +1,17 @@
+{
+  "name": "HandleBarsClass",
+  "homepage": "https://github.com/SorrelBrigman/HandleBarsClass",
+  "authors": [
+    "Sorrel Brigman <sorrel.k@gmail.com>"
+  ],
+  "description": "Class exercise in handlebars",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
